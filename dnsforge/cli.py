@@ -19,8 +19,11 @@ from .validator import validate_zone
 console = Console()
 
 
+from . import __version__ as dnsforge_version
+
+
 @click.group()
-@click.version_option(package_name="dnsforge")
+@click.version_option(version=dnsforge_version)
 def main() -> None:
     """DNS zone file parser, validator, analyzer, and converter."""
     pass
